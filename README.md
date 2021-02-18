@@ -15,13 +15,13 @@ $ curl -X POST https://coston.flare.network/ext/bc/C/rpc \
 {"jsonrpc":"2.0","id":67,"result":"Athereum 1.0"}
 ```
 
-The testnet response for the `web3_clientVersion` method us shows that the EVM uses the [JSON-RPC 2.0 Specification](https://www.jsonrpc.org/specification). The client, which is a software implementation of Athereum, gives us information about the testnet [node](https://ethereum.org/en/developers/docs/nodes-and-clients/) that we are connecting to through the endpoint.
+The testnet response for the `web3_clientVersion` method us shows that the EVM uses the [JSON-RPC 2.0 Specification](https://www.jsonrpc.org/specification). The client, which is a software implementation of Athereum, responds with information about the testnet [node](https://ethereum.org/en/developers/docs/nodes-and-clients/) that we are connecting to through the endpoint.
 
 There are a lot of great API methods so I recommend that you take a look at the full list. Let's take a look at some more examples:
 
-**`eth_accounts`**
+### **`eth_accounts`**
 
-Returns a list of addresses owned by client.
+Returns a list of addresses owned by the client.
 
 ```
 $ curl -X POST https://coston.flare.network/ext/bc/C/rpc \
@@ -47,9 +47,9 @@ $ curl -X POST https://coston.flare.network/ext/bc/C/rpc \
 }
 ```
 
-**`eth_blockNumber`**
+### **`eth_blockNumber`**
 
-Returns the number of most recent block.
+Returns the number of the most recent block.
 
 ```
 $ curl -X POST https://coston.flare.network/ext/bc/C/rpc \
@@ -74,7 +74,7 @@ $ python -c "print int('0x388a4', 16)"
 
 We can now see that the most recent block is number `231588`.
 
-**`eth_getBlockByNumber`**
+### **`eth_getBlockByNumber`**
 
 Returns information about the specified block. Note that the parameter expects a hex-encoded number.
 
@@ -127,7 +127,7 @@ $ curl -X POST https://coston.flare.network/ext/bc/C/rpc \
 }
 ```
 
-**`eth_getBalance`**
+### **`eth_getBalance`**
 
 Gets the balance for an account in wei (1 Spark = 10^18 wei).
 
